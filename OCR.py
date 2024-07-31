@@ -71,7 +71,6 @@ def ocr(filename, show_boxes):
         boxes = bounding_boxes(img_list, show_boxes)
         if not show_boxes:
             text = extract_text(boxes)
-            # text = 'hii'
             return text
     else:
         st.warning('Please select a PDF file!')
@@ -103,7 +102,7 @@ if uploaded_file:
             
             if st.button('Save File'):
                 dirname = st.text_input('Selected folder:', filedialog.askdirectory(master=root))
-                with open(os.path.join(dirname, 'extracted_text.txt'), 'w') as file:
+                with open(os.path.join(dirname, 'extracted_text.txt'), 'w', encoding='utf-8') as file:
                         file.write(st.session_state.text)
                 st.success('File saved successfully!')
                 

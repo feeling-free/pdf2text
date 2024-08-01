@@ -9,7 +9,7 @@ from tkinter import messagebox
 
 # converts pdf to list of images
 def pdf_to_img(pdf):
-    pdf_pages = convert_from_path(pdf, dpi=350, poppler_path=r'C:\Program Files\poppler-0.68.0\bin')
+    pdf_pages = convert_from_path(pdf, dpi=350, poppler_path=r'poppler-24.02.0\Library\bin')
     i = 1
     img_list = []
     for page in pdf_pages:

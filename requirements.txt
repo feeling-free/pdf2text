@@ -2,3 +2,4 @@ pytesseract
 pdf2image
 streamlit
 opencv-python
+poppler-utils
